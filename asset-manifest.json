@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/remote-roofing/static/css/main.7d793458.chunk.css",
+    "main.js": "/remote-roofing/static/js/main.74d0e5f7.chunk.js",
+    "main.js.map": "/remote-roofing/static/js/main.74d0e5f7.chunk.js.map",
+    "runtime-main.js": "/remote-roofing/static/js/runtime-main.6eb5daf5.js",
+    "runtime-main.js.map": "/remote-roofing/static/js/runtime-main.6eb5daf5.js.map",
+    "static/js/2.1275d76c.chunk.js": "/remote-roofing/static/js/2.1275d76c.chunk.js",
+    "static/js/2.1275d76c.chunk.js.map": "/remote-roofing/static/js/2.1275d76c.chunk.js.map",
+    "index.html": "/remote-roofing/index.html",
+    "precache-manifest.01bfeffdca500e3851f34bb939ff0d3b.js": "/remote-roofing/precache-manifest.01bfeffdca500e3851f34bb939ff0d3b.js",
+    "service-worker.js": "/remote-roofing/service-worker.js",
+    "static/css/main.7d793458.chunk.css.map": "/remote-roofing/static/css/main.7d793458.chunk.css.map",
+    "static/js/2.1275d76c.chunk.js.LICENSE.txt": "/remote-roofing/static/js/2.1275d76c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6eb5daf5.js",
+    "static/js/2.1275d76c.chunk.js",
+    "static/css/main.7d793458.chunk.css",
+    "static/js/main.74d0e5f7.chunk.js"
+  ]
+}
