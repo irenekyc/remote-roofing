@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MovieCard = ({data})=>{
-    console.log("load")
+
     return(
         <div className="movie-card">
             <div className="card-content">
