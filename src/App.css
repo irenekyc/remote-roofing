@@ -262,6 +262,11 @@ footer .footer-apps-downloads ul li img{
         height:35px;
         width:auto;
     }
+
+    .movie-card{
+        width:200px;
+        height:300px;
+    }
     
 
 }
