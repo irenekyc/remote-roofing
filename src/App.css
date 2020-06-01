@@ -180,11 +180,12 @@ footer{
 
 footer .footer-nav-links ul{
     width:100%;
-    max-width:700px;
+    max-width:800px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    flex-wrap: wrap;
 }
 
 footer .footer-nav-links ul li{
@@ -215,7 +216,7 @@ footer .footer-apps-downloads ul{
 }
 
 footer .footer-apps-downloads ul{
-    width:300px;
+    width:400px;
 }
 
 footer .footer-apps-downloads ul li img{
@@ -225,9 +226,6 @@ footer .footer-apps-downloads ul li img{
 
 
 @media (max-width: 769px){
-    footer .footer-nav-links ul{
-        flex-wrap: wrap;
-    }
     footer .flex{
         flex-direction: column;
         align-items: flex-start;
@@ -254,4 +252,16 @@ footer .footer-apps-downloads ul li img{
         justify-content: space-evenly;
         align-items: center;
     }
+
+    footer .footer-apps-downloads ul{
+        flex-wrap: wrap;
+        width:250px;
+    }
+
+    footer .footer-apps-downloads ul li img{
+        height:35px;
+        width:auto;
+    }
+    
+
 }
