@@ -1,18 +1,29 @@
 const initialState ={
+    loading: false,
+    error: false,
     movieData: null,
     filter: null,
     curPage: 0,
     sort: null
 }
 
-const dataReducer = (state = initialState, {type, payload})=>{
+const dataReducer = (state = initialState, {type, payload, loading, page, error})=>{
     switch(type){
-        case "filter":
+        case "LOADMOVIE":
             return state = {
+                ...state,
                 movieData: payload,
-                filter: null,
-                curPage:0,
-                sort:null
+                curPage:page,
+            }
+        case "LOADING": 
+            return state = {
+                ...state,
+                loading: loading
+            }
+        case "LOADFAIL":
+            return state = {
+                ...state,
+                error: error,
             }
         default:
             return state;

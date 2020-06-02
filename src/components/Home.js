@@ -1,12 +1,12 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {useDispatch} from 'react-redux'
-import {openSeries, openMovie} from '../actions/openPage'
+import {fetchData} from '../actions/movieData'
 
 const Home = ()=>{
     const dispatch = useDispatch()
     return(
-        <Fragment>
-                        <div className="movie-card home-page-card" onClick={()=>dispatch(openSeries())}>
+        <div className="movie-cards-container">
+                        <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, null, "movie"))}>
                             <div className="card-content">
                                 <div className="card-content-bg">
                                     <i className="fas fa-film"></i>
@@ -20,7 +20,7 @@ const Home = ()=>{
                             </div>
                         </div>
 
-                         <div className="movie-card home-page-card" onClick={()=>dispatch(openMovie())}>
+                         <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, null, "series"))}>
                              <div className="card-content">
                                 <div className="card-content-bg">
                                         <i className="fas fa-film"></i>
@@ -33,7 +33,7 @@ const Home = ()=>{
                                     <h5>Popular Movies</h5>
                             </div>
                          </div>
-                    </Fragment>
+        </div>
     )
 }
 

@@ -16,17 +16,6 @@ export const openMobileMenu = ()=>{
     }
 }
 
-export const openMovie = ()=>{
-    return {
-        type : "OPENMOVIE"
-    }
-}
-
-export const openSeries = ()=>{
-    return {
-        type: "OPENSERIES"
-    }
-}
 
 export const backHome = ()=>{
     return {
