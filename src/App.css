@@ -66,9 +66,10 @@ li{
     flex:1;
 }
 
-.header-content a{
+.header-content span{
     color:white;
     margin-right:2rem;
+    cursor: pointer;
 }
 
 .btn-gray, .btn-white{
@@ -269,4 +270,60 @@ footer .footer-apps-downloads ul li img{
     }
     
 
+}
+
+
+/*************** LOGIN FORM *******************/
+.loginContainer{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.alert-container{
+    padding: 6px 12px;
+    background:red;
+    color:white;
+}
+
+.loginForm{
+    width:500px;
+    max-width:90%;
+    height:300px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.inputField{
+    width: 80%;
+    height:30px;
+    padding: 5px 10px;
+}
+.loginForm #usernameField,
+.loginForm #passwordField{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+}
+
+.loginForm small{
+    color: red;
+    font-size:0.7rem;
+    font-style: italic;
+}
+
+.loginForm #openRegister{
+    cursor: pointer;
+    color: #333;
+}
+.loginForm #openRegister:hover{
+    text-decoration: underline;
 }
