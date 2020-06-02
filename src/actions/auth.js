@@ -1,7 +1,6 @@
 
 export const login = (data)=>{
     if (data.username === "helloworld" && data.password ==="hw123"){
-
         return {
             type: "LOGINSUCCESS"
         }
@@ -16,5 +15,12 @@ export const login = (data)=>{
 export const logout = ()=>{
     return{
         type: "LOGOUT"
+    }
+}
+
+export const register = (regUsername)=>{
+    return{
+        type: "REGSUCCESS",
+        payload: regUsername
     }
 }

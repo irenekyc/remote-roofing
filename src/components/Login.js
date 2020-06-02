@@ -72,13 +72,13 @@ const Login = ()=>{
                 <div id="usernameField">
                     <label for="username"> Username:</label>
                     <input onChange={(e)=>onChangeHandler(e)} id="username" type="text" className="inputField" placeholder="Username: helloworld" value={loginData.username}/>
-                    {error.username && (<small> Username cannot be empty</small>)}
+                    {error.username && (<small className="alert"> Username cannot be empty</small>)}
 
                 </div>
                 <div id="passwordField">
                     <label for="password"> Password: </label>
                     <input onChange={(e)=>onChangeHandler(e)} id="password" type="password" className="inputField" placeholder="Password: hw123" value={loginData.password} />
-                    {error.password && (<small> Please input password</small>)}
+                    {error.password && (<small className="alert"> Please input password</small>)}
                 </div>
                 <button className="btn-gray" onClick={()=>onClickHandler()}> Confirm</button>
                 <p id="openRegister" onClick={()=>dispatch(openRegister())}> New to DEMO? Register for free</p>

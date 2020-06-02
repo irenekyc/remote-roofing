@@ -6,6 +6,7 @@ const initialState = {
 const webReducer = (state=initialState, {type})=>{
     switch(type){
         case "LOGINSUCCESS":
+        case "REGSUCCESS":
             return state={
                 ...state,
                 curPage: "home"
@@ -22,12 +23,12 @@ const webReducer = (state=initialState, {type})=>{
             };
         case "OPENLOGIN":
             return state={
-                ...state,
+                mobileMenu: false,
                 curPage: "login"
             };
         case "OPENREGISTER":
             return state={
-                ...state,
+                mobileMenu: false,
                 curPage: "register"
             }
         case "OPENRMOBILEMENU":

@@ -274,7 +274,8 @@ footer .footer-apps-downloads ul li img{
 
 
 /*************** LOGIN FORM *******************/
-.loginContainer{
+.loginContainer,
+.registerContainer{
     width:100%;
     height:100%;
     display:flex;
@@ -289,10 +290,11 @@ footer .footer-apps-downloads ul li img{
     color:white;
 }
 
-.loginForm{
+.loginForm,
+.registerForm{
     width:500px;
     max-width:90%;
-    height:300px;
+    height:220px;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -305,16 +307,23 @@ footer .footer-apps-downloads ul li img{
     width: 80%;
     height:30px;
     padding: 5px 10px;
+    border: 1px solid #333;
+    outline:none;
 }
+
 .loginForm #usernameField,
-.loginForm #passwordField{
+.loginForm #passwordField,
+.registerForm #regUserField,
+.registerForm #regPasswordField{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     width:100%;
+    flex:1;
 }
 
-.loginForm small{
+.loginForm .alert,
+.registerForm .alert{
     color: red;
     font-size:0.7rem;
     font-style: italic;

@@ -12,7 +12,7 @@ export const openLogin = ()=>{
 
 export const openMobileMenu = ()=>{
     return {
-        type: "OPENMOBILEMENU"
+        type: "OPENRMOBILEMENU"
     }
 }
 
