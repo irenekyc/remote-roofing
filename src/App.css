@@ -336,3 +336,20 @@ footer .footer-apps-downloads ul li img{
 .loginForm #openRegister:hover{
     text-decoration: underline;
 }
+
+/**************** FILTER CONTAINER *****************/
+.filterContainer, 
+.paginationContainer{
+    display:flex;
+    width:90%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:0.5rem;
+}
+
+.filterContainer div span{
+    margin-right:0.8rem;
+}
+
