@@ -349,7 +349,12 @@ footer .footer-apps-downloads ul li img{
     margin-bottom:0.5rem;
 }
 
+.filterContainer{
+    flex-direction: column;
+}
+
 .filterContainer div span{
     margin-right:0.8rem;
+    color: var(--nav-bar-color);
 }
 

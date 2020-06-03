@@ -12,20 +12,23 @@ const Movie = ()=>{
     return (
         <Fragment>
             <div className="contentHead">
-                   <div className="goBack" ongClick={()=>dispatch(backHome())}> Back Home </div>
-                    <FilterContainer />
+                   <div className="goBack" onClick={()=>dispatch(backHome())}> Back Home </div>
                 </div>
                 
-                <div className="movie-cards-container">
+                
                     {loading && (<h3> Loading...</h3>)}
                     {error && (<h3> Oops. Something went wrong</h3>)}
                     {movieData !==null && (
-                        movieData.map(e=> <MovieCard key={e.title} data={e} />)
-                    )}
-                 </div>
-            <div className="contentFoot">
-                <PaginationContainer />
-            </div>
+                        <Fragment>
+                            <FilterContainer />
+                            <div className="movie-cards-container">
+                                {movieData.map(e=> <MovieCard key={e.title} data={e} />)}
+                            </div>
+                            <div className="contentFoot">
+                                 <PaginationContainer />
+                             </div>
+                        </Fragment>)}
+            
         </Fragment>
     )
     
