@@ -6,7 +6,7 @@ const Home = ()=>{
     const dispatch = useDispatch()
     return(
         <div className="movie-cards-container">
-                        <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, null, null, null,"movie"))}>
+                        <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, "asc", null,"movie"))}>
                             <div className="card-content">
                                 <div className="card-content-bg">
                                     <i className="fas fa-film"></i>
@@ -20,7 +20,7 @@ const Home = ()=>{
                             </div>
                         </div>
 
-                         <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, null, null,null, "series"))}>
+                         <div className="movie-card home-page-card" onClick={()=>dispatch(fetchData(0, "asc",null, "series"))}>
                              <div className="card-content">
                                 <div className="card-content-bg">
                                         <i className="fas fa-film"></i>

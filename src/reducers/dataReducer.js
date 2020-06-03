@@ -4,24 +4,22 @@ const initialState ={
     movieData: null,
     filter: null,
     curPage: 0,
-    sortYear: "desc",
     sortTitle: "asc",
     year: null,
     totalPage: null
 }
 
-const dataReducer = (state = initialState, {type, payload, loading, page, error, filter, sortTitle, sortYear, year, totalPage})=>{
+const dataReducer = (state = initialState, {type, payload, loading, curPage, error, filter, sortTitle, year, totalPage})=>{
     switch(type){
         case "LOADMOVIE":
             return state = {
                 ...state,
                 movieData: payload,
-                curPage:page,
+                curPage:curPage,
                 filter: filter,
                 totalPage: totalPage,
                 year: year,
                 sortTitle: sortTitle,
-                sortYear: sortYear
 
             }
         case "LOADING": 

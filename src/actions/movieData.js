@@ -1,5 +1,5 @@
 
-export const  fetchData = (page=0, sortYear="desc", sortTitle="asc", year=2010, filter) => async dispatch=>{
+export const  fetchData = (page=0, sortTitle="asc", year=2010, filter) => async dispatch=>{
     dispatch({
         type: "LOADING",
         loading: true,
@@ -24,29 +24,21 @@ export const  fetchData = (page=0, sortYear="desc", sortTitle="asc", year=2010, 
         const filteredMovies = movies.entries.filter(e=> e.programType === filter && e.releaseYear >= year)
         const totalPage = Math.ceil(filteredMovies.length / 21)
         let sortedMovies = []
-        switch(sortTitle){
-            case "asc":
-                 sortedMovies = filteredMovies.sort(function(a,b) {
-                    return a.title > b.title ? 0 : -1});
-            case "desc":
-                sortedMovies = filteredMovies.sort(function(a,b) {
-                    return a.title > b.title ? -1 : 0});
-            default: sortedMovies = filteredMovies
-        }
-        switch(sortYear){
-            case "asc":
-                sortedMovies = sortedMovies.sort(function(a,b) {
-                    return a.releaseYear > b.releaseYear ? 0 : -1});
-            case "desc":
-                sortedMovies = sortedMovies.sort(function(a,b){
-                    return a.releaseYear > b.releaseYear ? -1: 0});
-            default: sortedMovies = sortedMovies;
-        }        
+        if (sortTitle === "asc"){
+            sortedMovies = filteredMovies.sort(function (a,b){
+                return a.title> b.title? 0 : -1;
+        } )}else if (sortTitle === "desc"){
+            sortedMovies = filteredMovies.sort(function (a,b){
+                return a.title> b.title? -1 : 0;
+        })}
+        sortedMovies = sortedMovies.slice(startFrom, endAt)
+        console.log(page)
+        console.log(sortedMovies)
+
         dispatch({
             type: "LOADMOVIE",
             payload: sortedMovies,
             filter: filter,
-            sortYear: sortYear,
             sortTitle: sortTitle,
             year: year,
             curPage: page,
