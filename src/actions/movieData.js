@@ -1,4 +1,4 @@
-export const  fetchData = (page=0, sort="asc", filter) => async dispatch=>{
+export const  fetchData = (page=0, sort="asc", year, filter) => async dispatch=>{
     dispatch({
         type: "LOADING",
         loading: true,
@@ -18,7 +18,7 @@ export const  fetchData = (page=0, sort="asc", filter) => async dispatch=>{
     const endAt = page*21 + 21;
     
     try{
-        const filteredMovies = movies.entries.filter(e=> e.programType === filter)
+        const filteredMovies = movies.entries.filter(e=> e.programType === filter && e.)
         const sortedMovies = filteredMovies.sort(function(a,b) {
             return a.title > b.title ? 0 : -1
         }).slice(startFrom, endAt)

@@ -26,7 +26,6 @@ const Movie = ()=>{
             <div className="contentFoot">
                 <PaginationContainer />
             </div>
-
         </Fragment>
     )
     
