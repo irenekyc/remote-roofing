@@ -371,4 +371,28 @@ footer .footer-apps-downloads ul li img{
     margin-right:0;
 }
 
+.searchbox-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbox-container input{
+    height:30px;
+    width:200px;
+    outline:none;
+    padding: 5px;
+}
+
+.searchbox-container .search-em{
+    font-weight:500;
+    color: red;
+}
+
+.searchbox-container .search-no-em{
+    color: gray;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
 

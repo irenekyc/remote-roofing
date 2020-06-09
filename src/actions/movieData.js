@@ -1,5 +1,5 @@
 
-export const  fetchData = (page=0, sortTitle="asc", year=2010, filter) => async dispatch=>{
+export const  fetchData = (page=0, sortTitle="asc", year=2010, filter, searchQuery=null) => async dispatch=>{
     dispatch({
         type: "LOADING",
         loading: true,
@@ -14,14 +14,19 @@ export const  fetchData = (page=0, sortTitle="asc", year=2010, filter) => async 
             type: "OPENMOVIE"
         })
     }
-
+    
     const response = await fetch('https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json')
     const movies = await response.json()
     const startFrom = page*21;
     const endAt = page*21 + 21;
     
     try{
-        const filteredMovies = movies.entries.filter(e=> e.programType === filter && e.releaseYear >= year)
+        let filteredMovies 
+        if (searchQuery !==null){
+            filteredMovies  = movies.entries.filter(e=> e.title.toLowerCase().includes(searchQuery.toLowerCase()))
+        } else if (searchQuery === null){
+            filteredMovies = movies.entries.filter(e=> e.programType === filter && e.releaseYear >= year)
+        }
         const totalPage = Math.ceil(filteredMovies.length / 21)
         let sortedMovies = []
         if (sortTitle === "asc"){
@@ -32,17 +37,15 @@ export const  fetchData = (page=0, sortTitle="asc", year=2010, filter) => async 
                 return a.title> b.title? -1 : 0;
         })}
         sortedMovies = sortedMovies.slice(startFrom, endAt)
-        console.log(page)
-        console.log(sortedMovies)
 
         dispatch({
             type: "LOADMOVIE",
             payload: sortedMovies,
             filter: filter,
-            sortTitle: sortTitle,
-            year: year,
+            year,
             curPage: page,
             totalPage,
+            searchQuery,
         })
         dispatch({
             type: "LOADING",

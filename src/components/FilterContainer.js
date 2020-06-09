@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import { fetchData } from '../actions/movieData'
 import {useDispatch, useSelector} from 'react-redux'
+import SearchBox from './SearchBox'
 
 const FilterContainer = ()=>{
     const dispatch = useDispatch()
@@ -18,6 +19,7 @@ const FilterContainer = ()=>{
                     <span onClick = {()=> dispatch(fetchData(0, "asc", year, filter))}> From A-Z</span> 
                     <span onClick = {()=> dispatch(fetchData(0, "desc", year, filter))}> From Z -A</span></div>
         </div>
+        <SearchBox />
     </Fragment>
     )
 }
