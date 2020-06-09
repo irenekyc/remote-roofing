@@ -336,3 +336,63 @@ footer .footer-apps-downloads ul li img{
 .loginForm #openRegister:hover{
     text-decoration: underline;
 }
+
+/**************** FILTER CONTAINER *****************/
+.filterContainer{
+    display:flex;
+    width:90%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:0.5rem;
+}
+
+.filterContainer{
+    flex-direction: column;
+}
+
+.filterContainer div span{
+    margin-right:0.8rem;
+    color: var(--nav-bar-color);
+}
+
+
+.paginationContainer .prev
+{
+    width:100px;
+    margin-right:auto;
+    margin-left:0;
+}
+.paginationContainer .next
+{
+    width:100px;
+    margin-left:auto;
+    margin-right:0;
+}
+
+.searchbox-container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbox-container input{
+    height:30px;
+    width:200px;
+    outline:none;
+    padding: 5px;
+}
+
+.searchbox-container .search-em{
+    font-weight:500;
+    color: red;
+}
+
+.searchbox-container .search-no-em{
+    color: gray;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
